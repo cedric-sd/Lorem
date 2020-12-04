@@ -1,4 +1,4 @@
-html, body, ul, li, p {
+html, body, ul, li{
   margin: 0;
   padding: 0;
   list-style: none;
@@ -11,6 +11,9 @@ a {
 }
 .content-padding {
   padding: 0px 100px;
+}
+.content-margin-top {
+  margin-top: 100px;
 }
 .header-container {
   background-color: #fef7f1;
@@ -85,3 +88,232 @@ a {
   font-weight: 700;
   font-size: 18px;
 }
+.container-brands {
+  margin-top: -30px;
+}
+.container-brands ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.box-brands {
+  background-color: white; 
+  border-radius: 20px;
+  box-shadow: 0px 10px 25px -20px #808080;
+  margin: 1px 90px;
+  padding: 15px;
+}
+.brands {
+  width: 150px;
+}
+.container-services {
+  display: flex;
+  flex-direction: row;
+}
+.image-services img {
+  width: 90%;
+}
+.information-services {
+  width: 80%;
+}
+.check-service {
+  margin: 30px 0px;
+  padding: 10px 35px;
+}
+.check-service:hover {
+  cursor: pointer;
+  background-color: #fef7f1;
+}
+.check-service p {
+  color: #808080;
+  font-size: 1rem;
+  margin: 20px 0px;
+}
+.box-question {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.box-question h3 {
+  margin: 20px;
+  color: #030B2F;
+}
+.box-question h3:hover {
+  cursor: pointer;
+}
+.title-services {
+  padding: 0px 40px;
+}
+.title-services h1 {
+  color: #030B2F;
+}
+.title-services span {
+  color: #808080;
+  font-size: 1.1rem;
+}
+/* checkbox */
+.checkbox {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.checkbox input {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.checkbox label {
+  position: relative;
+  padding-left: 2.2em;
+  display: inline-block;
+}
+.checkbox label::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 20px;
+  width: 20px;
+  background: #FFF;
+  margin-right: 0.5em;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  border-radius: 20px;
+}
+.checkbox label::after {
+  content: "\2713";
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translate(-50%, -50%);
+  font-size: 1em;
+  color: #FFF;
+  opacity: 0;
+  transition: all 0.2s ease;
+  font-size: 15px;
+}
+.checkbox label:focus::before, .checkbox label:hover::before {
+  background: #eee;
+}
+.checkbox input:checked + label::before {
+  background: #43bebb;
+  border-color: #43bebb;
+  border: 2px solid #000;
+}
+.checkbox input:checked + label::after {
+  opacity: 1;
+}
+.container-benefit {
+  display: flex;
+  flex-direction: row;
+}
+.information-benefit {
+  padding: 0px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.information-benefit h1 {
+  color: #030B2F;
+}
+.information-benefit span {
+  color: #808080;
+  font-size: 1.1rem;
+}
+.image-benefit img {
+  width: 500px;
+  margin-top: 40px;
+}
+.wrapper-image-benefit {
+  padding: 60px;
+  display: flex;
+}
+.square {
+  background-color: #c6d0da;
+  width: 250px;
+  height: 650px;
+  position: absolute;
+  right: 90px;
+  z-index: -1;
+}
+.design-icon {
+  background-color: white;
+  box-shadow: 0px 20px 20px -10px #808080;
+  padding: 25px 35px;
+  border-radius: 20px;
+  height: fit-content;
+  margin-right: -60px;
+  z-index: 1;
+}
+.design-icon i {
+  font-size: 40px;
+  color: #43bebb;
+}
+.btn-images {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  bottom: 0;
+  position: absolute;
+  left: -300px;
+}
+.btn-images button {
+  background-color: white;
+  border-radius: 30px;
+  margin-left: 20px;
+  padding: 20px 24px;
+  border: none;
+  box-shadow: 0px 20px 20px -10px #808080;
+}
+.btn-images button:hover {
+  background-color: #c6d0da;
+  cursor: pointer;
+}
+.btn-images button>i {
+  font-size: 1rem;
+  color: #030B2F;
+}
+.btn-images button:focus {
+  outline: none;
+}
+/* comments */
+.comments {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.comments img {
+  width: 100%;
+}
+.square-comments {
+  background-color: #c6d0da;
+  width: 100%;
+  height: 260px;
+  position: absolute;
+  z-index: -1;
+}
+.section-comments {
+  display: flex;
+  align-items: flex-end;
+}
+.information-comments {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 160px;
+  margin-bottom: 50px;
+}
+.information-comments p {
+  color: #030B2F;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+/* Footer */
