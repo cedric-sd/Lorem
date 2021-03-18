@@ -1,22 +1,21 @@
 //Simple bar
 import SimpleBar from 'simplebar-react'
-
 import SidebarContent from './SidebarContent'
+
+import * as S from 'styles/VerticalLayout/Sidebar'
 
 const Sidebar = () => {
   return (
     <>
-      <div className="vertical-menu">
-        <div data-simplebar className="h-100">
-          {/* {this.props.type !== 'condensed' ? (
-            <SimpleBar style={{ maxHeight: '100%' }}>
-              <SidebarContent />
-            </SimpleBar>
-          ) : ( */}
-          <SidebarContent />
+      <S.VerticalMenu className="vertical-menu">
+        <S.ContainerSimpleBar className="h-100">
+          {/* {this.props.type !== 'condensed' ? () : ( */}
+          <SimpleBar style={{ maxHeight: '100%' }}>
+            <SidebarContent />
+          </SimpleBar>
           {/* )} */}
-        </div>
-      </div>
+        </S.ContainerSimpleBar>
+      </S.VerticalMenu>
     </>
   )
 }

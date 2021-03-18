@@ -15,14 +15,13 @@ import {
 
 import { BiArrowFromRight } from 'react-icons/bi'
 import { RiApps2Line, RiSettings5Line } from 'react-icons/ri'
-import { BsArrowsFullscreen } from 'react-icons/bs'
+import { FaReact } from 'react-icons/fa'
 
 //Import menuDropdown
-import LanguageDropdown from 'components/CommonForBoth/TopbarDropdown/LanguageDropdown'
 import NotificationDropdown from 'components/CommonForBoth/TopbarDropdown/NotificationDropdown'
 import ProfileMenu from 'components/CommonForBoth/TopbarDropdown/ProfileMenu'
 //Import Megamenu
-import MegaMenu from './MegaMenu'
+import Projects from './Projects'
 
 import * as S from 'styles/VerticalLayout/Header'
 
@@ -36,30 +35,27 @@ const Header = () => {
               <Link href="#">
                 <S.Logo>
                   <span className="logo-sm">
-                    ok
                     {/* <img src={logosmdark} alt="" height="22" /> */}
                   </span>
                   <span className="logo-lg">
-                    ok
-                    {/* <img src={logodark} alt="" height="20" /> */}
+                    <img src="/images/LogoBGlight.png" alt="" height="22" />
                   </span>
                 </S.Logo>
               </Link>
 
-              <Link href="#">
+              {/* <Link href="#">
                 <a className="logo logo-light">
                   <span className="logo-sm">
                     ok
-                    {/* <img src={logosmlight} alt="" height="22" /> */}
+                    <img src={logosmlight} alt="" height="22" />
                   </span>
                   <span className="logo-lg">
                     ok
-                    {/* <img src={logolight} alt="" height="20" /> */}
+                    <img src={logolight} alt="" height="20" />
                   </span>
                 </a>
-              </Link>
+              </Link> */}
             </S.NavbarBrandBox>
-
             <Button
               size="sm"
               color="none"
@@ -70,15 +66,7 @@ const Header = () => {
             >
               <BiArrowFromRight size={26} />
             </Button>
-
-            <S.FormAppSearch className="d-none d-lg-block">
-              <div className="position-relative">
-                <S.InputSearch type="text" placeholder="Search" />
-                <S.SpanSearch />
-              </div>
-            </S.FormAppSearch>
-
-            <MegaMenu />
+            <Projects />/ <FaReact className="ml-3 mr-1" /> Untitled
           </div>
 
           <div className="d-flex">
@@ -119,8 +107,6 @@ const Header = () => {
                 </Form>
               </div>
             </div>
-
-            <LanguageDropdown />
 
             <Dropdown
               // isOpen={this.state.isSocialPf}
@@ -189,17 +175,6 @@ const Header = () => {
                 </div>
               </DropdownMenu>
             </Dropdown>
-
-            <div className="dropdown d-none d-lg-inline-block ml-1">
-              <Button
-                color="none"
-                type="button"
-                className="header-item noti-icon waves-effect"
-                // onClick={this.toggleFullscreen}
-              >
-                <BsArrowsFullscreen />
-              </Button>
-            </div>
 
             <NotificationDropdown />
 

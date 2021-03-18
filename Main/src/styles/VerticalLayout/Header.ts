@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import { Form, Input } from 'reactstrap'
-import { FaSearch } from 'react-icons/fa'
 
 export const PageTopbar = styled.header`
   position: fixed;
@@ -16,34 +14,15 @@ export const NavbarHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  height: 70px;
+  height: 50px;
   padding: 0 calc(24px / 2) 0 0;
 `
 export const NavbarBrandBox = styled.div`
-  background: #252b3b;
+  background: #fff;
   padding: 0 1.5rem;
-  width: 240px;
+  width: 200px;
+  height: 50px;
 `
 export const Logo = styled.a`
-  line-height: 70px;
-`
-export const FormAppSearch = styled(Form)`
-  padding: calc(32px / 2) 0;
-`
-export const InputSearch = styled(Input)`
-  border: none;
-  height: 38px;
-  padding-left: 40px;
-  padding-right: 20px;
-  background-color: #f1f5f7;
-  box-shadow: none;
-  border-radius: 30px;
-  margin-left: 5px;
-`
-export const SpanSearch = styled(FaSearch)`
-  position: absolute;
-  left: 20px;
-  top: 12px;
-  color: #74788d;
-  width: 16px;
+  line-height: 50px;
 `
