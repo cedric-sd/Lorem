@@ -1,11 +1,12 @@
-import Link from 'next/link'
-import LanguageDropdown from 'components/CommonForBoth/TopbarDropdown/LanguageDropdown'
-
+//third part
 import { Label, Input } from 'reactstrap'
 import { CgCloseO } from 'react-icons/cg'
-
 import SimpleBar from 'simplebar-react'
-
+//contexts
+import { toggleSettings } from 'contexts/HeaderActions'
+//internal components
+import LanguageDropdown from 'components/CommonForBoth/TopbarDropdown/LanguageDropdown'
+//styles
 import * as S from 'styles/CommonForBoth/Settingsbar'
 
 const Settingsbar: React.FC = () => {
@@ -15,14 +16,14 @@ const Settingsbar: React.FC = () => {
         <SimpleBar style={{ height: '900px' }}>
           <div data-simplebar className="h-100">
             <S.SettingsbarTitle className="px-3">
-              <Link
-                href="#"
-                // onClick={this.hideRightbar}
+              <button
+                className="right-bar-toggle float-right"
+                onClick={() => {
+                  toggleSettings()
+                }}
               >
-                <a className="right-bar-toggle float-right">
-                  <CgCloseO />
-                </a>
-              </Link>
+                <CgCloseO />
+              </button>
               <h5 className="m-0">Settings</h5>
             </S.SettingsbarTitle>
 

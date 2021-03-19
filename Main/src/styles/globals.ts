@@ -17,6 +17,9 @@ const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
   }
+  h4, h5, hr {
+    margin: 0;
+  }
 `
 
 export default GlobalStyles

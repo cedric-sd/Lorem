@@ -19,10 +19,10 @@ export const NavbarHeader = styled.div`
 `
 export const NavbarBrandBox = styled.div`
   background: #fff;
-  padding: 0 1.5rem;
-  width: 200px;
+  padding-left: 1.5rem;
   height: 50px;
 `
 export const Logo = styled.a`
   line-height: 50px;
+  margin-right: 10px;
 `

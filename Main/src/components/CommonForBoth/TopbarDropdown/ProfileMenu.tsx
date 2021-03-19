@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {
   Dropdown,
   DropdownToggle,
@@ -5,14 +6,24 @@ import {
   DropdownItem
 } from 'reactstrap'
 
-import { FiChevronDown } from 'react-icons/fi'
+import { FiChevronDown, FiUser } from 'react-icons/fi'
+import { IoWalletOutline } from 'react-icons/io5'
+import { AiOutlinePoweroff } from 'react-icons/ai'
+import { RiSettings5Line } from 'react-icons/ri'
+import { BiLock } from 'react-icons/bi'
+
+import * as S from 'styles/CommonForBoth/TopbarDropdown/ProfileMenu'
 
 const ProfileMenu = () => {
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+
+  const toggle = () => setDropdownOpen((prevState) => !prevState)
+
   return (
     <>
       <Dropdown
-        // isOpen={this.state.menu}
-        // toggle={this.toggle}
+        isOpen={dropdownOpen}
+        toggle={toggle}
         className="d-inline-block user-dropdown"
       >
         <DropdownToggle
@@ -20,11 +31,11 @@ const ProfileMenu = () => {
           className="btn header-item waves-effect"
           id="page-header-user-dropdown"
         >
-          {/* <img
-            className="rounded-circle header-profile-user mr-1"
-            src={avatar2}
+          <S.HeaderProfileMenu
+            className="rounded-circle mr-1"
+            src={'/images/avatar-5.jpg'}
             alt="Header Avatar"
-          /> */}
+          />
           <span className="d-none d-xl-inline-block ml-1 text-transform">
             Admin
             {/* {username} */}
@@ -34,25 +45,26 @@ const ProfileMenu = () => {
         </DropdownToggle>
         <DropdownMenu right>
           <DropdownItem href="#">
-            <i className="ri-user-line align-middle mr-1"></i>{' '}
+            <FiUser className="align-middle mr-1" /> Profile{' '}
             {/* {this.props.t('Profile')} */}
           </DropdownItem>
           <DropdownItem href="#">
-            <i className="ri-wallet-2-line align-middle mr-1"></i>{' '}
+            <IoWalletOutline className="align-middle mr-1" /> My Wallet
             {/* {this.props.t('My Wallet')} */}
           </DropdownItem>
           <DropdownItem className="d-block" href="#">
             <span className="badge badge-success float-right mt-1">11</span>
-            <i className="ri-settings-2-line align-middle mr-1"></i>{' '}
+            <RiSettings5Line className="align-middle mr-1" /> Settings
             {/* {this.props.t('Settings')} */}
           </DropdownItem>
           <DropdownItem href="#">
-            <i className="ri-lock-unlock-line align-middle mr-1"></i>{' '}
+            <BiLock className="align-middle mr-1" /> Lock screen
             {/* {this.props.t('Lock screen')} */}
           </DropdownItem>
           <DropdownItem divider />
           <DropdownItem className="text-danger" href="/logout">
-            <i className="ri-shut-down-line align-middle mr-1 text-danger"></i>{' '}
+            <AiOutlinePoweroff className="align-middle mr-1 text-danger" />{' '}
+            Logout
             {/* {this.props.t('Logout')} */}
           </DropdownItem>
         </DropdownMenu>

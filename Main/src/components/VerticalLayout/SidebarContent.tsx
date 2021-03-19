@@ -1,81 +1,58 @@
-import { useState } from 'react'
-import Link from 'next/link'
+//contexts
+import { toggleDragNDropBar } from 'contexts/DragNDropActions'
+
+import { FiLayout } from 'react-icons/fi'
+import { CgComponents } from 'react-icons/cg'
 
 import * as S from 'styles/VerticalLayout/SidebarContent'
 
 const SidebarContent = () => {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const toggle = () => setIsOpen(!isOpen)
-
   return (
     <>
       <div id="sidebar-menu">
         <ul className="list-unstyled" id="side-menu">
           <S.MenuTitle>
+            <FiLayout />
             Layout
             {/* {this.props.t('Cedric')} */}
           </S.MenuTitle>
 
           <li>
-            <Link href="#">
-              <S.ElementOption>
-                <i className="ri-dashboard-line"></i>
-                {/* <span className="badge badge-pill badge-success float-right">
-                  3
-                </span> */}
-                <span className="ml-1">
-                  option 1{/* {this.props.t('Dashboard')} */}
-                </span>
-              </S.ElementOption>
-            </Link>
+            <S.ElementOption onClick={() => toggleDragNDropBar(true)}>
+              <span className="ml-1">
+                option 1{/* {this.props.t('Dashboard')} */}
+              </span>
+            </S.ElementOption>
           </li>
 
           <li>
-            <Link href="#">
-              <S.ElementOption>
-                <i className="ri-dashboard-line"></i>
-                {/* <span className="badge badge-pill badge-success float-right">
-                  3
-                </span> */}
-                <span className="ml-1">
-                  option 2{/* {this.props.t('Dashboard')} */}
-                </span>
-              </S.ElementOption>
-            </Link>
+            <S.ElementOption onClick={() => toggleDragNDropBar(true)}>
+              <span className="ml-1">
+                option 2{/* {this.props.t('Dashboard')} */}
+              </span>
+            </S.ElementOption>
           </li>
 
           <S.MenuTitle>
+            <CgComponents />
             Components
             {/* {this.props.t('Pages')} */}
           </S.MenuTitle>
 
           <li>
-            <Link href="#">
-              <S.ElementOption>
-                <i className="ri-dashboard-line"></i>
-                {/* <span className="badge badge-pill badge-success float-right">
-                  3
-                </span> */}
-                <span className="ml-1">
-                  option 1{/* {this.props.t('Dashboard')} */}
-                </span>
-              </S.ElementOption>
-            </Link>
+            <S.ElementOption onClick={() => toggleDragNDropBar(true)}>
+              <span className="ml-1">
+                option 1{/* {this.props.t('Dashboard')} */}
+              </span>
+            </S.ElementOption>
           </li>
 
           <li>
-            <Link href="#">
-              <S.ElementOption>
-                <i className="ri-dashboard-line"></i>
-                {/* <span className="badge badge-pill badge-success float-right">
-                  3
-                </span> */}
-                <span className="ml-1">
-                  option 2{/* {this.props.t('Dashboard')} */}
-                </span>
-              </S.ElementOption>
-            </Link>
+            <S.ElementOption onClick={() => toggleDragNDropBar(true)}>
+              <span className="ml-1">
+                option 2{/* {this.props.t('Dashboard')} */}
+              </span>
+            </S.ElementOption>
           </li>
         </ul>
       </div>

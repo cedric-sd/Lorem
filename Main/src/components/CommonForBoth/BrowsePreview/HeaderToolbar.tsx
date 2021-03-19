@@ -26,7 +26,7 @@ const HeaderToolbar: React.FC = () => {
             <InputGroupAddon addonType="prepend">
               <InputGroupText>https://</InputGroupText>
             </InputGroupAddon>
-            <Input placeholder="username" />
+            <Input placeholder="meusite.com" />
           </InputGroup>
         </div>
         <div>

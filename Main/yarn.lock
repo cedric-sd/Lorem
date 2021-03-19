@@ -5691,6 +5691,13 @@ simplebar@^5.3.0:
     lodash.throttle "^4.1.1"
     resize-observer-polyfill "^1.5.1"
 
+simpler-state@^1.0.0-rc.3:
+  version "1.0.0-rc.3"
+  resolved "https://registry.yarnpkg.com/simpler-state/-/simpler-state-1.0.0-rc.3.tgz#2eec04c3d4662126020bc1a89b8a255fd931a219"
+  integrity sha512-YBrcUdvJcc89VVWJc8rVK05/lAA5ocD0D/ZXO5PTTLaC0Hhf60+4T+pWEK+tyK2XSfebFlmrBbd04F1dysdbNg==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+
 sisteransi@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.5.tgz#134d681297756437cc05ca01370d3a7a571075ed"
