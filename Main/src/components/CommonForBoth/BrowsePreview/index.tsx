@@ -1,8 +1,6 @@
-import React from 'react'
-import HeaderToolbar from './HeaderToolbar'
-
 import { Container, Row, Col } from 'reactstrap'
 
+import HeaderToolbar from './HeaderToolbar'
 import * as S from 'styles/CommonForBoth/BrowsePreview'
 
 const BrowsePreview: React.FC = () => {
@@ -14,7 +12,7 @@ const BrowsePreview: React.FC = () => {
             <Col>
               <S.ComponentBrowser>
                 <HeaderToolbar />
-                <S.Canvas>canvas</S.Canvas>
+                <S.Canvas src="http://localhost:3000/PageCustom"></S.Canvas>
               </S.ComponentBrowser>
             </Col>
           </Row>

@@ -1,9 +1,11 @@
 import Layout from 'components/VerticalLayout'
 
-export default function workspace() {
+const Workspace = () => {
   return (
     <>
       <Layout />
     </>
   )
 }
+
+export default Workspace

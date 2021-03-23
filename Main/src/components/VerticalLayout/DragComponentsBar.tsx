@@ -1,57 +1,38 @@
 import React from 'react'
-import { Card, CardImg } from 'reactstrap'
+import { useEntity } from 'simpler-state'
 
-import { toggleDragNDropBar } from 'contexts/DragNDropActions'
+import {
+  toggleDragNDropBar,
+  isDragNDropBarShow
+} from 'contexts/DragNDropActions'
 
+import PreviewComponent from './PreviewComponent'
 import * as S from 'styles/VerticalLayout/DragComponentBar'
 
 const DragComponentsBar: React.FC = () => {
+  const handleIsDragNDropBarShow = useEntity(isDragNDropBarShow)
   return (
     <>
-      <S.Container>
+      <S.Container displayed={handleIsDragNDropBarShow}>
         <ul>
           <li className="p-3 text-muted">
             <h4>Sections</h4>
           </li>
           <li>
-            <S.PreviewImage>
-              <Card>
-                <CardImg
-                  top
-                  width="100%"
-                  src="/assets/256x186.svg"
-                  alt="Card image cap"
-                />
-              </Card>
-            </S.PreviewImage>
+            <PreviewComponent />
           </li>
           <li>
-            <S.PreviewImage>
-              <Card>
-                <CardImg
-                  top
-                  width="100%"
-                  src="/assets/256x186.svg"
-                  alt="Card image cap"
-                />
-              </Card>
-            </S.PreviewImage>
+            <PreviewComponent />
           </li>
           <li>
-            <S.PreviewImage>
-              <Card>
-                <CardImg
-                  top
-                  width="100%"
-                  src="/assets/256x186.svg"
-                  alt="Card image cap"
-                />
-              </Card>
-            </S.PreviewImage>
+            <PreviewComponent />
           </li>
         </ul>
       </S.Container>
-      <S.Overlay onClick={() => toggleDragNDropBar(false)}></S.Overlay>
+      <S.Overlay
+        displayed={handleIsDragNDropBarShow}
+        onClick={() => toggleDragNDropBar(false)}
+      ></S.Overlay>
     </>
   )
 }

@@ -1,5 +1,3 @@
-//Simple bar
-import SimpleBar from 'simplebar-react'
 import SidebarContent from './SidebarContent'
 
 import { useEntity } from 'simpler-state'
@@ -14,9 +12,7 @@ const Sidebar = () => {
       {handleToggleElementsSidebar ? (
         <S.VerticalMenu>
           <S.ContainerSimpleBar className="h-100">
-            <SimpleBar style={{ maxHeight: '100%' }}>
-              <SidebarContent />
-            </SimpleBar>
+            <SidebarContent />
           </S.ContainerSimpleBar>
         </S.VerticalMenu>
       ) : null}

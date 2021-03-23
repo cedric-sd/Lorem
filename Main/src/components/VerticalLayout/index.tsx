@@ -2,7 +2,6 @@ import { Player } from '@lottiefiles/react-lottie-player'
 import { useEntity } from 'simpler-state'
 
 import { isSettingsMenuShow } from 'contexts/HeaderActions'
-import { isDragNDropBarShow } from 'contexts/DragNDropActions'
 
 // Layout Related Components
 import Header from './Header'
@@ -16,7 +15,6 @@ import * as S from 'styles/VerticalLayout/index'
 
 const Layout: React.FC = () => {
   const handleToggleSettings = useEntity(isSettingsMenuShow)
-  const handleToggleDragNDropBar = useEntity(isDragNDropBarShow)
 
   return (
     <>
@@ -33,15 +31,13 @@ const Layout: React.FC = () => {
 
       <div id="layout-wrapper">
         <Header />
-        <Sidebar
-        // theme={this.props.leftSideBarTheme}
-        // type={this.props.leftSideBarType}
-        // isMobile={this.state.isMobile}
-        />
-        {handleToggleDragNDropBar ? <DragComponentsBar /> : null}
+        <Sidebar />
+        <DragComponentsBar />
+
         <S.MainContent>
           <BrowsePreview />
         </S.MainContent>
+
         <RightSideBar />
         {handleToggleSettings ? <Settingsbar /> : null}
       </div>

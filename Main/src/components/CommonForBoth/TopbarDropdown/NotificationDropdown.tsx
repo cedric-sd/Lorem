@@ -7,7 +7,6 @@ import {
   Col,
   Media
 } from 'reactstrap'
-import SimpleBar from 'simplebar-react'
 
 import { IoNotificationsOutline } from 'react-icons/io5'
 
@@ -50,7 +49,7 @@ const NotificationDropdown = () => {
               </div>
             </Row>
           </div>
-          <SimpleBar style={{ maxHeight: '230px' }}>
+          <div style={{ maxHeight: '230px' }}>
             <Link href="#">
               <a className="text-reset notification-item">
                 <Media>
@@ -164,7 +163,7 @@ const NotificationDropdown = () => {
                 </Media>
               </a>
             </Link>
-          </SimpleBar>
+          </div>
           <div className="p-2 border-top">
             <Link href="#">
               <a className="btn btn-sm btn-link font-size-14 btn-block text-center">
